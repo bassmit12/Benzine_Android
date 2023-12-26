@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "benzine",
+  "private_key_id": "1d3d2597d658547fa4f9884df9623c39447f83aa",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCvYKotNdLFAiOq\nazmAH/91kHyEOucIQeVK9nD8y3I+Zs2QlWsmi54TePF+UXTn0Wifomkx9MpqxHB0\nTZlK6pjni1NibQzZwU6LBzowTX1yZ1Uuhv2oCSuR4YIPnry12TMijfeYXe+T6FgU\nb9PR1YQSMczukczMdKh2X0Nfy0BrFi5+aWHp9GrzI4xi4kKC7kOj9IG1bygTC3K/\nyZ4clea53Y6SpwafsCjm6XHs8TDBPH+1W1ohlm1u9zjdqOSzse2jFRvcnqflj0Bq\nPI17v5qNMyUtQLAMuvVPQov0uActbzwzwIDZxqejYbJ8oyun7LrxOezpCRRdyxFp\n8GrKyZtPAgMBAAECggEAFI0E7rlQ59RsA4Cpw0bR85/Tx4GeKGHjEZlhUhjbsU5F\n+7xWoF9Z+GQtavpL8wz0mp2N1X8e58tPINclsG60g5AtsZSfyItAve/sif56mxkF\naqdXkAT1vb7UM9ULvgTOsNeRUkx8/N220eZCHGOjJKgAoLAlyeDzC16hvCxKxywn\nlFapsKn6LIuBxIbPMMTN/tqaOb0tnDTFgjECttgvofsGg1wWTyK069I67bPeMnpb\nlytm2xuHRYi60KhM0z4oacCAZrFEDhIKMaNhGYxVL/TZIF+Q9k91wCLM5W0cmvYI\nUVHy4CNYZHKsaMUCWhUXcAgp1SiV9YUlC3mGXJ1qQQKBgQDX2QYG6ZQIDnpak50Y\nDoj2w/t3wfDCSnnxZrCKhMFz57KbKHdkUYpm4bpQhAjjHm3gWoBqUeu9MkPu1ru1\nWBxpWeYFC2VSQBRFS7UDnq50DdaRBKCPQ9jKJniuWY7TvqgS35RIDUFB6btbuLpy\nyJk+NczFC3ZW0gZd24Rf5oGwYQKBgQDQAGUku4/4tzPyGxOSt7tsSaKfEYaqAcfF\nzsv/oWDIfF1FGCmZr7Ttyx74svvt/4D2FeWdOVYYJpDl9Encn/zSU1qY1rO0Lwns\nOrYpD89x+uNWXvAnWDsueRLbTGbV+1cxFYRGVHbNIB5h2doEePwTxJWjyEqqrMnf\nJhCwP/KprwKBgBtjknw2D26mR6hOqtRuo7qMS9B6b4533Nlg6m3pQpLuh59glyXH\nowRDCF1HI8mOBus9EKZtFri/NBeOb+sm7xP/MEzbkVPKhcf1P1biP8jCKMPmDmmf\ndlbQYufcvV7pBnK+pBYweGNgwUF2Q1JlWeym7wDh33ZM2Dn4rOduXG6BAoGBALAK\nlY/4OsrK62kOJ4u2eycUT1GHuMysQxMUii1pvQsRzrLK13KedmgH0Me2XGi7Jb+h\nGrvtqgM4qMwm7FiRA55TM8tFc8SdRy2rJz8rhWw3Zi9UnLcAAt67VA1M5YBXgB0n\n09Lea8oCVBSHF/FPIDHu4KNEwoUfRp/ZjKhPByc7AoGAFw7FN+HhkQb/qpKlhMDt\n4IptwgGFtmxvXbKREzvxMqX5kp/iyodMpy2tQ0tS2nEoM9McNcbm6kI2U+RyeDUP\nh7E88QmKVpHD0czGrxiwx95pcmRGb5nyDtnY8QtAb22ZhgjeQ05f/fQntrVxTQkO\nS1rDeTuz13/vObLSxzZ5TwM=\n-----END PRIVATE KEY-----\n",
+  "client_email": "play-console-service-account@benzine.iam.gserviceaccount.com",
+  "client_id": "111120033843179175628",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/play-console-service-account%40benzine.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

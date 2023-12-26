@@ -1,0 +1,21 @@
+{
+  "expo": {
+    "name": "Benzine",
+    "slug": "blank",
+    "version": "1.0.0",
+    "platforms": ["ios", "android", "web"],
+    "icon": "./assets/icon.png",
+    "extra": {
+      "eas": {
+        "projectId": "c33f02f5-b23a-45f4-aefe-378e25142949"
+      }
+    },
+    "android": {
+      "package": "com.bassmit12.blank",
+      "config": {
+        "usesCleartextTraffic": true
+      }
+    },
+    "plugins": ["expo-build-properties"]
+  }
+}

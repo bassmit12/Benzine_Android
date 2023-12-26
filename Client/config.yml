@@ -1,0 +1,5 @@
+authtoken: cr_2a4tBT2IA1FdcYolGIYtbvc0wSb
+tunnels:
+  default:
+    proto: http
+    addr: 5000
