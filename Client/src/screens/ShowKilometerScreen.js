@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-const ShowKilometerScreen = ({ navigation }) => {
+const ShowKilometerScreen = () => {
   const [allData, setAllData] = useState([]);
   const [uniqueNames, setUniqueNames] = useState([]);
   const [selectedName, setSelectedName] = useState(null);
