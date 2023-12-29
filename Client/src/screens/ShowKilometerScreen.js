@@ -6,6 +6,7 @@ import {
   Text,
   TouchableOpacity,
 } from "react-native";
+import io from "socket.io-client";
 
 const ShowKilometerScreen = () => {
   const [allData, setAllData] = useState([]);
@@ -14,6 +15,22 @@ const ShowKilometerScreen = () => {
 
   useEffect(() => {
     fetchData();
+
+    // Establish a websocket connection
+    const socket = io("https://measured-gentle-labrador.ngrok-free.app");
+
+    // Listen for the 'newTrip' event
+    socket.on("newTrip", (newTrip) => {
+      // Update state with the new trip
+      setAllData((prevData) => [...prevData, newTrip]);
+
+      // You may need to update uniqueNames here if needed
+    });
+
+    // Clean up the websocket connection when the component unmounts
+    return () => {
+      socket.disconnect();
+    };
   }, []); // Fetch data when the component mounts
 
   const fetchData = async () => {

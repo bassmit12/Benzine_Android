@@ -31,6 +31,9 @@ const EnterKilometerScreen = () => {
         }
       );
 
+      const responseData = await response.json();
+      console.log("Server response:", responseData);
+
       if (response.ok) {
         Alert.alert("Success", "Trip created successfully");
       } else {

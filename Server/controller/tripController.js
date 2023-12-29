@@ -1,11 +1,19 @@
 // controllers/tripController.js
+
 import Trip from "../db/models/Trip.js";
+import { io } from "../index.js"; // Import the io instance from index.js
 
 export const createTrip = async (req, res) => {
   try {
     const { name, startKilometers, endKilometers } = req.body;
+    console.log("Received trip data:", req.body);
+
     const trip = new Trip({ name, startKilometers, endKilometers });
     await trip.save();
+
+    // Emit a 'newTrip' event to all connected clients
+    io.emit("newTrip", trip);
+
     res.status(201).json({ message: "Trip created successfully", trip });
   } catch (error) {
     console.error(error);
