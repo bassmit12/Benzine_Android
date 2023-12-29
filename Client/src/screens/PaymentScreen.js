@@ -22,7 +22,15 @@ const PaymentScreen = () => {
   }, []);
 
   return (
-    <View>
+    <View
+      style={{
+        flex: 1,
+        justifyContent: "top",
+        alignItems: "center",
+        padding: 16,
+        backgroundColor: "white",
+      }}
+    >
       <Text>Total Kilometers for Each Name:</Text>
       {totalKilometers.map((entry) => (
         <Text key={entry._id}>
