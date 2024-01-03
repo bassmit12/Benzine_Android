@@ -1,9 +1,13 @@
 // PaymentScreen.js
 import React, { useState, useEffect } from "react";
-import { Text, View } from "react-native";
+import { Button, Text, View } from "react-native";
+import TextInputComponent from "../components/TextInputComponent";
+import SubmitButton from "../components/SubmitButton";
 
 const PaymentScreen = () => {
   const [totalKilometers, setTotalKilometers] = useState([]);
+  const [gasolinePrice, setGasolinePrice] = useState("");
+  const [moneyPaid, setMoneyPaid] = useState("");
 
   useEffect(() => {
     const fetchTotalKilometers = async () => {
@@ -21,12 +25,40 @@ const PaymentScreen = () => {
     fetchTotalKilometers();
   }, []);
 
+  const calculateAmountOwed = () => {
+    // Convert inputs to numbers
+    const pricePerLiter = parseFloat(gasolinePrice);
+    const paidAmount = parseFloat(moneyPaid);
+
+    if (isNaN(pricePerLiter) || isNaN(paidAmount)) {
+      // Handle invalid input
+      console.error("Invalid input for gasoline price or money paid");
+      return;
+    }
+
+    // Initialize an object to store the amount owed for each person
+    const amountOwedPerPerson = {};
+
+    // Calculate total distance based on the total kilometers
+    totalKilometers.forEach((entry) => {
+      // Calculate liters consumed for each person
+      const litersConsumed = entry.totalKilometers / 10;
+
+      // Calculate amount owed for each person
+      const amountOwed = litersConsumed * pricePerLiter;
+
+      // Store the amount owed for each person in the object
+      amountOwedPerPerson[entry._id] = amountOwed;
+    });
+
+    console.log("Amount Owed Per Person:", amountOwedPerPerson);
+  };
+
   return (
     <View
       style={{
         flex: 1,
-        justifyContent: "top",
-        alignItems: "center",
+        justifyContent: "center",
         padding: 16,
         backgroundColor: "white",
       }}
@@ -37,6 +69,23 @@ const PaymentScreen = () => {
           {entry._id}: {entry.totalKilometers} km
         </Text>
       ))}
+      <TextInputComponent
+        labelText="Gasoline Price (per liter)"
+        value={gasolinePrice}
+        onChangeText={(text) => setGasolinePrice(text)}
+      />
+
+      <TextInputComponent
+        labelText="Money Paid"
+        value={moneyPaid}
+        onChangeText={(text) => setMoneyPaid(text)}
+      />
+
+      {/* Use the SubmitButton component instead of the default Button */}
+      <SubmitButton
+        label="Calculate Amount Owed"
+        onPress={calculateAmountOwed}
+      />
     </View>
   );
 };
