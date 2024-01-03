@@ -1,7 +1,7 @@
 // controllers/tripController.js
 
 import Trip from "../db/models/Trip.js";
-import { io } from "../index.js"; // Import the io instance from index.js
+import { io } from "../server.js"; // Import the io instance from index.js
 
 export const createTrip = async (req, res) => {
   try {
