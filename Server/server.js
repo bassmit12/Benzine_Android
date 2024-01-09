@@ -1,8 +1,8 @@
 import express from "express";
 import dotenv from "dotenv";
-import connectDB from "./db/connectDB.js";
-import tripRoutes from "./routes/tripRoutes.js";
-import testRoutes from "./routes/testRoutes.js";
+import connectDB from "./src/db/connectDB.js";
+import tripRoutes from "./src/routes/tripRoutes.js";
+import testRoutes from "./src/routes/testRoutes.js";
 import http from "http"; // Import the 'http' module
 import { Server } from "socket.io"; // Import the 'Server' class
 
@@ -28,6 +28,14 @@ app.use("/test", testRoutes);
 
 server.listen(PORT, () => {
   console.log(`Server started at http://localhost:${PORT}`);
+});
+
+app.get("/", (req, res) => {
+  res.send("Express JS on Vercel");
+});
+
+app.get("/ping", (req, res) => {
+  res.send("pong 🏓");
 });
 
 // Attach Socket.IO to your HTTP server
