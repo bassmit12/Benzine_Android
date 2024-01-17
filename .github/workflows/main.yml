@@ -22,8 +22,8 @@ jobs:
         uses: actions/cache@v3
         with:
           path: |
-            ./client/node_modules
-            ./backend/node_modules
+            ./Client/node_modules
+            ./Server/node_modules
           key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
 
       - name: Set up Node.js ${{ matrix.node-version }}
@@ -31,7 +31,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
-          cache-dependency-path: server/package-lock.json
+          cache-dependency-path: Server/package-lock.json
 
   docker-build:
     name: Docker Build
@@ -50,9 +50,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Backend Docker Image
-        run: docker build -t bassmit123/benzine-server:latest ./server
+        run: docker build -t bassmit123/benzine-server:latest ./Server
 
       - name: Push Backend Docker Image to Docker Hub
         run: docker push bassmit123/benzine-server:latest:latest
-
-
