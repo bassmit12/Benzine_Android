@@ -33,4 +33,4 @@ COPY . .
 EXPOSE 5001
 
 # Run the application.
-CMD npm start
+CMD npm run dev
