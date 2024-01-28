@@ -13,7 +13,7 @@ const PaymentScreen = () => {
     const fetchTotalKilometers = async () => {
       try {
         const response = await fetch(
-          "https://measured-gentle-labrador.ngrok-free.app/trip/calculateTotalKilometers"
+          "http://benzine-server.germanywestcentral.azurecontainer.io:5000/trip/calculateTotalKilometers"
         );
         const result = await response.json();
         setTotalKilometers(result);

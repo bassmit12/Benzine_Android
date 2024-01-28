@@ -17,7 +17,9 @@ const ShowKilometerScreen = () => {
     fetchData();
 
     // Establish a websocket connection
-    const socket = io("https://measured-gentle-labrador.ngrok-free.app");
+    const socket = io(
+      "http://benzine-server.germanywestcentral.azurecontainer.io:5000"
+    );
 
     // Listen for the 'newTrip' event
     socket.on("newTrip", (newTrip) => {
@@ -36,7 +38,7 @@ const ShowKilometerScreen = () => {
   const fetchData = async () => {
     try {
       const response = await fetch(
-        "https://measured-gentle-labrador.ngrok-free.app/trip/get"
+        "http://benzine-server.germanywestcentral.azurecontainer.io:5000/trip/get"
       );
       const result = await response.json();
 

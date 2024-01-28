@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 import { Text, View, TouchableOpacity, Alert } from "react-native";
+import api from "../utils/api.js"; // Import the api instance
 
 const SettingsScreen = () => {
   const [connectionStatus, setConnectionStatus] = useState(null);
 
   const testConnection = async () => {
     try {
-      const response = await fetch(
-        "https://measured-gentle-labrador.ngrok-free.app/test/connection"
-      );
+      const response = await api.get("/test/connection");
 
-      if (response.ok) {
+      if (response.status === 200) {
         setConnectionStatus("Connection successful!");
       } else {
         setConnectionStatus("Connection failed.");
@@ -23,14 +22,9 @@ const SettingsScreen = () => {
 
   const clearTrips = async () => {
     try {
-      const response = await fetch(
-        "https://measured-gentle-labrador.ngrok-free.app/trip/deleteAll",
-        {
-          method: "DELETE",
-        }
-      );
+      const response = await api.delete("/trip/deleteAll");
 
-      if (response.ok) {
+      if (response.status === 200) {
         Alert.alert("Success", "Trips cleared successfully");
       } else {
         Alert.alert("Error", "Failed to clear trips");

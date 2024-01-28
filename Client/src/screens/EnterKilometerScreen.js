@@ -16,7 +16,7 @@ const EnterKilometerScreen = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://measured-gentle-labrador.ngrok-free.app/trip/get"
+          "http://benzine-server.germanywestcentral.azurecontainer.io:5000/trip/get"
         );
         const responseData = await response.json();
 
@@ -50,7 +50,7 @@ const EnterKilometerScreen = () => {
         : "Unknown Person";
 
       const response = await fetch(
-        "https://measured-gentle-labrador.ngrok-free.app/trip/create",
+        "http://benzine-server.germanywestcentral.azurecontainer.io:5000/trip/create",
         {
           method: "POST",
           headers: {
