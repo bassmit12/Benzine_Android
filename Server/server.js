@@ -5,6 +5,7 @@ import tripRoutes from "./src/routes/tripRoutes.js";
 import testRoutes from "./src/routes/testRoutes.js";
 import http from "http"; // Import the 'http' module
 import { Server } from "socket.io"; // Import the 'Server' class
+import cors from "cors"; // Import the 'cors' middleware
 
 dotenv.config();
 connectDB();
@@ -19,6 +20,7 @@ export { io }; // Create a new instance of the Socket.IO server
 
 const PORT = process.env.PORT || 5000;
 
+app.use(cors()); // Add CORS middleware to allow all origins
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
