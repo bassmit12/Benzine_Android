@@ -2,8 +2,7 @@
 
 import axios from "axios";
 
-const API_BASE_URL =
-  "http://benzine-server.germanywestcentral.azurecontainer.io:5000"; // Update with your actual server address
+const API_BASE_URL = "http://98.67.198.186:5000"; // Update with your actual server address
 
 const api = axios.create({
   baseURL: API_BASE_URL,
