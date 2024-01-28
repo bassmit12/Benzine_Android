@@ -14,7 +14,8 @@
       "package": "com.bassmit12.blank",
       "config": {
         "usesCleartextTraffic": true
-      }
+      },
+      "usesCleartextTraffic": true
     },
     "plugins": ["expo-build-properties"]
   }
