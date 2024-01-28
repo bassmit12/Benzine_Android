@@ -16,7 +16,7 @@ const SettingsScreen = () => {
       }
     } catch (error) {
       console.error("Error testing connection:", error);
-      setConnectionStatus("Error testing connection:", error);
+      setConnectionStatus("Error testing connection: " + error.message);
     }
   };
 
