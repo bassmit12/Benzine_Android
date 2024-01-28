@@ -8,13 +8,6 @@ import ShowKilometerScreen from "./src/screens/ShowKilometerScreen";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import SettingsScreen from "./src/screens/SettingsScreen";
 import PaymentScreen from "./src/screens/PaymentScreen";
-import "react-native-gesture-handler";
-
-import "react-native-reanimated";
-
-import "react-native-safe-area-context";
-
-import "react-native-screens";
 
 const Tab = createBottomTabNavigator();
 
